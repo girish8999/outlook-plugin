@@ -1,0 +1,52 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Deal Panel Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="60" height="60" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h2 class="ms-font-xl">Welcome</h2>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl"> Create Deal to make interaction..! </h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main">
+       <!--- <p><label id="item-subject"></label></p>
+        <p><label id="item-body"></label></p>-->
+        <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+            <form id="dealForm">
+                <label for="dealName">Deal Name:</label><br>
+                <input type="text" id="dealName" name="dealName"><br>
+                <label for="dealDate">Deal Date:</label><br>
+                <input type="text" id="dealDate" name="dealDate"><br>
+                
+                <label for="clientName">Client Name:</label><br>
+                <input type="text" id="clientName" name="clientName"><br>
+                <label for="dealDescription">Deal Description:</label><br>
+                <textarea rows="5" cols="33" type="text" id="dealDescription" name="dealDescription"></textarea>
+              </form>
+            <span id="create-deal" class="ms-Button-label">Create Deal</span>
+            <span id="submit-deal" class="ms-Button-label">Submit</span>
+        </div>
+    </main>
+</body>
+
+</html>
