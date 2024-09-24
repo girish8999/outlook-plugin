@@ -1,3 +1,6 @@
+workflow-outlook-plugin: 
+https://github.com/girish8999/outlook-plugin/blob/main/workflow-outlook-plugin.mp4
+
 outlook Web App
 [screen-capture.webm](https://user-images.githubusercontent.com/23502710/181438233-c616719e-0d75-4e42-9686-f0bba5896110.webm)
 
