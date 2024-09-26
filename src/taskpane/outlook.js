@@ -15,6 +15,27 @@ Office.onReady((info) => {
   }
 });
 
+function onAppointmentSend(event) {
+  Office.context.mailbox.item.notificationMessages.addAsync("prompt", {
+      type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,
+      message: "Please enter the user name:",
+      icon: "icon-16",
+      persistent: true
+  });
+
+  // Show a dialog to get the user name
+  Office.context.ui.displayDialogAsync('https://localhost:3000/popup.html', { height: 30, width: 20 }, function (asyncResult) {
+      var dialog = asyncResult.value;
+      dialog.addEventHandler(Office.EventType.DialogMessageReceived, function (args) {
+          // Handle the user input
+          var userName = args.message;
+          // Do something with the user name
+          dialog.close();
+          event.completed({ allowEvent: true });
+      });
+  });
+}
+
 export async function run() {
   /**
    * Insert your Outlook code here
